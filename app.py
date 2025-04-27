@@ -3,6 +3,7 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import LineBotApiError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -65,5 +66,9 @@ def get_weather(city):
     return f"{city}の天気は{weather}、気温は{temp}°Cです。"
 
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    # 環境変数で指定されたポートを使用
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
+
