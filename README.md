@@ -2,7 +2,7 @@
 
 このプロジェクトは、ユーザーがLINEで送信した都市名に対して、その都市の現在の天気情報を自動で返信するチャットボットです。PythonとFlaskを用いて構築し、LINE Messaging APIおよびOpenWeatherMap APIと連携しています。
 
-## LINEチャットボットのコードはapp.pyにあります。
+## ★LINEチャットボットのコードはapp.pyにあります。
 
 ##  主な機能
 
