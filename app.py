@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 
-# LINE Botの設定（テスト用のキーなので、実運用では.envなどから読み込み推奨）
+# LINE Botの設定
 LINE_CHANNEL_SECRET = '65caa9c1ad0f9aeb8fed4c84d6e849a4'
 LINE_CHANNEL_ACCESS_TOKEN = '5vsLzylYyE6hwyPdaLldvgGqF+aaDiEVdA49O0sacnTSRnwBFmxlR3h5yIp4rPkNDCI5YF3Gp7qRbuHBDbvrm2YHCCNG+lh/aPNufUrBr1QCJCsfnmEUN0hD9bXpLwdnLq03tLm7jIjnbjhlHTZzygdB04t89/1O/w1cDnyilFU='
 
@@ -68,7 +68,7 @@ def get_weather(city):
 
 
 if __name__ == "__main__":
-    # 環境変数で指定されたポートを使用
+    # 環境変数で指定されたポート
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host="0.0.0.0", port=port)
 
